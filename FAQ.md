@@ -4,9 +4,10 @@
 
 **What does Unpause do?**
 It gathers everything you play into one library: game files for consoles and computers (48 systems, Atari 2600 onward, plus
-arcade and DOS), your Steam, Epic, GOG, Xbox, Battle.net, EA app, Ubisoft Connect, Amazon Games and itch games, and the
-programs on your PC. Play starts each one the right way: the matching emulator for a game file, the store's own client for a
-store game. It tracks play time, backs up saves before a launch, and tells you in plain words why something did not start.
+arcade and DOS), your Steam, Epic, GOG, Xbox and Battle.net games (EA app, Ubisoft Connect, Amazon Games and itch are
+experimental until they have been tried on a real install), and the programs on your PC. Play starts each one the right
+way: the matching emulator for a game file, the store's own client for a store game. It tracks play time, backs up saves
+before a launch, and tells you in plain words why something did not start.
 
 **Does Unpause come with games, BIOS files or keys? Can it get them for me?**
 No, and it never will. Unpause does not include, download, link to or explain how to obtain game files, BIOS or firmware
@@ -37,19 +38,21 @@ No telemetry. A bug report is only sent when you send it, and you see every line
 user name are replaced before you see them.
 
 **Where are my passwords for artwork services kept?**
-In your system's credential store (Windows Credential Manager, the macOS Keychain, the Linux keyring), never in Unpause's
-settings or logs.
+In your system's credential store (Windows Credential Manager; on Linux and the Steam Deck, the kernel keyring), never in
+Unpause's settings or logs. On Linux and the Steam Deck they are forgotten when you restart, until an upcoming fix, so you
+enter them again after a restart.
 
 ## Playing
 
 **Can I use a controller?**
-Yes, everything works with a d‑pad and two buttons, as well as a keyboard or a mouse. Hold **Back for 5 seconds** (or **Esc
-for 3**) anywhere to return to Home with the default controls.
+Yes. You can use a controller, a keyboard or a mouse, and switch between them at any time. In this build pad navigation can
+still skip past several items on one press; a keyboard is the reliable choice until that fix ships. Hold **Back for 5
+seconds** (or **Esc for 3**) anywhere to return to Home with the default controls.
 
 **Does it work on my handheld?**
-On a ROG Ally, Legion Go or MSI Claw, Unpause switches to a handheld layout with bigger text and targets, shows your battery
-before you play, and keeps a game running through sleep. Steam Deck support is being tuned now; the AppImage runs in desktop
-mode today (see [INSTALL.md](https://github.com/GigaRho/unpause-releases/blob/main/INSTALL.md)).
+Support for the Steam Deck and for the ROG Ally, Legion Go and MSI Claw is being built for the beta. Until each has been
+tested on the real device, its download will be labeled Preview. On the Deck, the AppImage runs in desktop mode (see
+[INSTALL.md](https://github.com/GigaRho/unpause-releases/blob/main/INSTALL.md)).
 
 **A game won't start. What now?**
 The Recovery screen says what happened (a missing BIOS file, a missing core, the emulator was not found, it crashed on
@@ -57,9 +60,11 @@ start…) and what to do next. From a game's Options, **Check this system** runs
 help, **Report this** on the Recovery screen fills in a bug report for you.
 
 **Are my saves safe?**
-Unpause never edits your saves. Before every launch it copies that game's saves (and, for GameCube, Wii, PlayStation,
-PlayStation 2 and PSP games, its save states) into its own backups folder, keeping the last 10 by default. A game's Options ›
-**Saves & states** restores any of them, after backing up what is there first.
+Unpause does not change your saves while you play. Before a launch, when **Before each launch** is on in a game's Options ›
+Saves & states (on by default), it copies that game's saves (and, for GameCube, Wii, PlayStation, PlayStation 2 and PSP
+games, its save states) into its own backups folder, keeping the last 10 by default. The same **Saves & states** screen
+restores any of them, after backing up what is there first. A restore writes into the emulator's save folder and can also
+change other games that share the same memory card or save folder, so check before you restore.
 
 **Where do my screenshots go?**
 Screenshots you take while playing through Unpause (RetroArch, Dolphin, PCSX2, DuckStation, PPSSPP, mGBA and Xbox Game Bar)
@@ -67,11 +72,13 @@ are copied into the game's Gallery when you stop playing. Your originals stay wh
 
 ## Updates and versions
 
-**How do I update?** Settings › Updates. See [UPDATING.md](https://github.com/GigaRho/unpause-releases/blob/main/UPDATING.md).
+**How do I update?** On the previews published so far, by hand: install the newest release over the one you have (your
+library and settings are kept); updates from inside Unpause are off until builds are signed. Then it is Settings › Updates.
+See [UPDATING.md](https://github.com/GigaRho/unpause-releases/blob/main/UPDATING.md).
 
 **What changed in this version?** [PATCH-NOTES.md](https://github.com/GigaRho/unpause-releases/blob/main/PATCH-NOTES.md), or What's new in Settings › Updates.
 
-**Why does Windows or macOS warn me when I install?**
+**Why does Windows warn me when I install?**
 Early builds are not code‑signed yet. [INSTALL.md](https://github.com/GigaRho/unpause-releases/blob/main/INSTALL.md) shows the one extra click; signed installers are on the way.
 
 ## Help

@@ -1,9 +1,11 @@
 # Unpause
 
-**One launcher for every generation of games.** Unpause puts your console games, your Steam, Epic, GOG, Xbox, Battle.net,
-EA, Ubisoft, Amazon and itch games, and the programs on your PC in one library, and starts each of them with the right
-emulator or store in one press. It is fast with tens of thousands of titles, works with a controller, a keyboard or a mouse,
-from a desk, a couch or a handheld, and explains in plain words when something goes wrong.
+**One launcher for every generation of games.** Unpause puts your console games, your Steam, Epic, GOG, Xbox and Battle.net
+games (EA app, Ubisoft Connect, Amazon Games and itch are experimental until tried on a real install), and the programs on
+your PC in one library, and starts each of them with the right
+emulator or store in one press. It is fast with tens of thousands of titles, is being built so that a keyboard, a mouse, a
+controller and touch each work on their own, at a desk, on a couch or on a handheld (in the previews, a few settings still
+need a keyboard or a mouse), and explains in plain words when something goes wrong.
 
 Unpause works with the emulators and stores you already have. It does not include, download or point to games, BIOS files
 or keys.
@@ -14,12 +16,12 @@ Open the [newest release](https://github.com/GigaRho/unpause-releases/releases) 
 
 | Your computer | The file to download | Notes |
 |---|---|---|
-| Windows 10 or 11 (64‑bit) | `Unpause_<version>_x64-setup.exe` | The usual choice. `…_x64_en-US.msi` is the same app for IT‑managed PCs. |
-| Windows handheld (ROG Ally, Legion Go, MSI Claw) | `Unpause_<version>_x64-setup.exe` | Unpause switches to its handheld layout by itself. |
-| Mac (Apple silicon or Intel) | `Unpause_<version>_universal.dmg` | One download for both kinds of Mac. |
-| Ubuntu, Debian, Mint, Pop!\_OS | `Unpause_<version>_amd64.deb` | |
-| Fedora, openSUSE | `Unpause-<version>-1.x86_64.rpm` | |
-| Steam Deck, or any other Linux | `Unpause_<version>_amd64.AppImage` | Runs without installing. |
+| Windows 10 or 11 (64‑bit) | `Unpause_<version>_x64-setup.exe` | The usual choice. The `.msi` for IT‑managed PCs comes with the stable release, not with previews and betas. |
+| Windows handheld (ROG Ally, Legion Go, MSI Claw) | `Unpause_<version>_x64-setup.exe` | **Preview** until it has been tested on each handheld. |
+| Mac (Apple silicon or Intel) | none yet | A Mac version comes once it has been tested on a Mac. |
+| Ubuntu, Debian, Mint, Pop!\_OS | `Unpause_<version>_amd64.deb` | **Preview.** |
+| Fedora, openSUSE | `Unpause-<version>-1.x86_64.rpm` | **Preview.** |
+| Steam Deck, or any other Linux | `Unpause_<version>_amd64.AppImage` | Runs without installing. **Preview** until it has been tested on a real Deck and on Linux. |
 
 Versions starting with `0.`, and any `-alpha` or `-beta`, are previews: they work, but expect rough edges and tell us about
 them.
@@ -39,8 +41,11 @@ Step‑by‑step instructions for each system are in **[INSTALL.md](https://gith
 
 ## Keeping Unpause up to date
 
-Settings › Updates checks for new versions, shows what's new first, and installs only when you say so, never while a game is
-running. You choose how new you like it: **stable**, **beta** or **nightly**. See **[UPDATING.md](https://github.com/GigaRho/unpause-releases/blob/main/UPDATING.md)**.
+The previews published so far are not signed, so updates from inside Unpause are off: install a new version by hand from
+the [newest release](https://github.com/GigaRho/unpause-releases/releases); your library and settings are kept. Once builds
+are signed, Settings › Updates checks for new versions, shows what's new first, and installs only when you say so, never
+while a game is running, on the **stable** or **beta** channel you choose. See
+**[UPDATING.md](https://github.com/GigaRho/unpause-releases/blob/main/UPDATING.md)**.
 
 ## Help and news
 
@@ -53,5 +58,5 @@ running. You choose how new you like it: **stable**, **beta** or **nightly**. Se
 ## About this page
 
 Everything here is published by Unpause's release process: the installers, their signatures, and the `channels` release,
-whose `stable.json`, `beta.json`, `nightly.json` and `packs.json` are what Settings › Updates reads. Please do not rely on
-those files' contents; they change with every release.
+whose `stable.json` and `beta.json` are what Settings › Updates reads once builds are signed. Please do not rely on those
+files' contents; they change with every release.

@@ -8,8 +8,8 @@ which one), then follow the steps for your system below.
 | | Minimum |
 |---|---|
 | Windows | Windows 10 or 11, 64‑bit. Unpause uses Microsoft Edge WebView2, which Windows 11 already has; on Windows 10 the installer fetches it if it is missing, so stay online for the first install. |
-| macOS | macOS 10.15 or newer, Apple silicon or Intel. |
-| Linux | A 64‑bit desktop from 2022 or later (Ubuntu 22.04, Debian 12, Fedora 36 or newer), or a Steam Deck in desktop mode. |
+| macOS | Not available yet: a Mac version comes once it has been tested on a Mac. |
+| Linux (**Preview**) | A 64‑bit desktop from 2022 or later (Ubuntu 22.04, Debian 12, Fedora 36 or newer), or a Steam Deck in desktop mode. |
 | Space | About 100 MB for Unpause itself; artwork, save backups and captures grow with your library. |
 | Games and emulators | Your own. Unpause launches the emulators and stores you already have, and can install a few open‑source emulators from their official releases. |
 
@@ -20,33 +20,35 @@ which one), then follow the steps for your system below.
    then **Run anyway**. (Signed installers are on the way; this step then goes away.)
 3. The installer puts Unpause in your Start menu. It installs for your user only and does not need administrator rights.
 
-The `.msi` is the same app for PCs managed by an IT department or installed with a deployment tool.
+The `.msi` (the same app for PCs managed by an IT department or installed with a deployment tool) is not offered for
+preview and beta builds; it comes with the stable release.
 
-**Windows handhelds** (ROG Ally, Legion Go, MSI Claw): install the same way in desktop mode. Unpause picks the handheld layout
-by itself; Settings › Accessibility › Input map has a Handheld map that puts Options and "hide Unpause" on the back paddles.
+**Windows handhelds** (ROG Ally, Legion Go, MSI Claw), a **Preview** until it has been tested on each handheld: install the
+same way in desktop mode. Unpause picks the handheld layout by itself; Settings › Accessibility › Input map has a Handheld map that puts Options and "hide Unpause" on the back paddles.
 
 ## macOS
 
-1. Open `Unpause_<version>_universal.dmg` and drag **Unpause** into **Applications**.
-2. Until Unpause is notarized by Apple, the first start says Unpause "cannot be opened because the developer cannot be
-   verified". In Finder, **right‑click (or Control‑click) Unpause › Open**, then **Open** again. You only do this once. On
-   macOS 15 and newer, open **System Settings › Privacy & Security** and choose **Open Anyway** next to the Unpause line.
+Not available yet. A Mac version comes once it has been tested on a Mac.
 
-## Linux
+## Linux (Preview)
 
-**Ubuntu, Debian, Mint, Pop!\_OS** — install the `.deb`:
+Every Linux package, and the Steam Deck, is a **Preview** until it has been tested on Linux and on a real Deck: it works, but
+expect rough edges and tell us about them. Known issue: on Linux and the Steam Deck, Unpause can wrongly say a game is
+"Not responding" (for example with Flatpak emulators); a later update fixes it.
+
+**Ubuntu, Debian, Mint, Pop!\_OS** (**Preview**) — install the `.deb`:
 
 ```bash
 sudo apt install ./Unpause_<version>_amd64.deb
 ```
 
-**Fedora, openSUSE** — install the `.rpm`:
+**Fedora, openSUSE** (**Preview**) — install the `.rpm`:
 
 ```bash
 sudo dnf install ./Unpause-<version>-1.x86_64.rpm
 ```
 
-**Any Linux, or the Steam Deck** — the AppImage runs without installing:
+**Any Linux, or the Steam Deck** (**Preview**) — the AppImage runs without installing:
 
 ```bash
 chmod +x Unpause_<version>_amd64.AppImage
@@ -65,31 +67,42 @@ folder stays as a backup.
 
 ## Where Unpause keeps your things
 
-Your library, settings, artwork, save backups (`backups`) and captures (`captures`) live in one folder:
+Your library (with the copies Unpause keeps before each upgrade, `library.sqlite.v*.bak`), settings, artwork, save backups
+(`backups`), captures (`captures`), the emulators you installed from Get emulators (`emulators`, **with their own settings and
+saves**) and your original emulator settings files that a performance preset replaced (`presets`) live in one folder:
 
 | System | Folder |
 |---|---|
 | Windows | `%APPDATA%\app.unpause.desktop` |
-| macOS | `~/Library/Application Support/app.unpause.desktop` |
 | Linux and Steam Deck | `~/.local/share/app.unpause.desktop` |
 
 The log Unpause writes (Settings › Help & feedback shows its last lines, scrubbed) is in `%LOCALAPPDATA%\app.unpause.desktop\logs`
-on Windows, `~/Library/Logs/app.unpause.desktop` on macOS and `~/.local/share/app.unpause.desktop/logs` on Linux.
+on Windows and `~/.local/share/app.unpause.desktop/logs` on Linux.
 
 Passwords and keys you give Unpause for artwork services are not in that folder: they are in your system's credential store
-(Windows Credential Manager, the macOS Keychain, the Linux keyring).
+(Windows Credential Manager; on Linux and the Steam Deck, the kernel keyring). On Linux and the Steam Deck they are forgotten
+when you restart, until an upcoming fix, so you enter them again after a restart.
 
-Your game files, your emulators' own save folders and your stores are never moved or changed. Before a launch, Unpause
-copies that game's saves into its `backups` folder, so a bad save can be undone from the game's Options › Saves & states.
+Your game files and your stores are never moved or changed. Your emulators' folders are changed in two cases: restoring a
+save backup writes into the emulator's save folder, and a performance preset writes the emulator's own settings file for that
+game (Revert on the game's Options puts yours back). Before a launch, Unpause copies that game's saves into its `backups`
+folder when **Before each launch** is on in a game's Options › Saves & states (on by default) and it knows where that
+emulator keeps them. You can restore a backup from the same screen, but restoring can also change other games that share the
+same memory card or save folder; check before you restore.
+
+Updating an emulator you installed from Get emulators can leave its saves in the old version folder, and a second update can
+delete them; copy its saves out before updating (fixed in an upcoming release).
 
 ## Uninstalling
 
 - **Windows**: Settings › Apps › Installed apps › Unpause › Uninstall. Your data folder stays unless you tick "Delete the
   application data" in the uninstaller.
-- **macOS**: drag Unpause from Applications to the Trash.
 - **Linux**: `sudo apt remove unpause`, `sudo dnf remove unpause`, or delete the AppImage.
 
-To remove everything, delete the data folder above as well. Your games and emulators are not touched either way.
+Deleting the data folder (or ticking the box) also deletes your save backups, the emulators you installed from Get emulators
+**together with their saves**, and the only copy of any emulator settings file a preset replaced; the presets stay applied in
+your emulators. Before you do it, revert your presets from each game's Options and copy out `backups` and `emulators` if you
+want to keep them. Your games and the emulators you installed yourself are not deleted either way.
 
 ## Something went wrong?
 

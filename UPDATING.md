@@ -1,6 +1,10 @@
 # Keeping Unpause up to date
 
-Everything happens in **Settings › Updates**. Unpause never installs anything behind your back.
+**On the preview builds published so far, updates from inside Unpause are off**: these builds are not signed yet, so they
+cannot check an update is genuine and never download one. Install a new version by hand from the
+[Releases](https://github.com/GigaRho/unpause-releases/releases) page (see "Updates are not signed on this build yet"
+below); your library and settings are kept. Once builds are signed, everything below happens in **Settings › Updates**,
+and Unpause never installs anything behind your back.
 
 ## Channels: how new you like it
 
@@ -8,12 +12,11 @@ Everything happens in **Settings › Updates**. Unpause never installs anything 
 |---|---|---|
 | **stable** (default) | Finished versions only (`1.2.0`). | Everyone. |
 | **beta** | Previews of the next version (`1.3.0-beta.1`) a week or more before it is final, plus every stable version. | Players who like new things early and tell us what broke. |
-| **nightly** | A build of the latest work, most days. | Testers. Things will break. |
 
 Switch channels in the first row of Settings › Updates. You are only ever offered a version newer than the one you have; a
-stable player never gets a beta or a nightly.
+stable player never gets a beta.
 
-## How an update happens
+## How an update happens (signed builds)
 
 1. Unpause checks your channel 30 seconds after it starts and every 6 hours after that, or when you press **Check now**.
    A check asks one small file what the newest version is; nothing downloads.
@@ -35,8 +38,9 @@ a newer installer over your current Unpause is an update too; your data is kept.
 
 ## Data packs
 
-Between versions, Check now can also bring a **data pack**: an updated list of consoles, emulator cores and default emulators.
-It is verified before use and switched in without a restart; the Updates screen says which pack is in force.
+A **data pack** is an updated list of consoles, emulator cores and default emulators that could arrive between versions.
+Data packs are **off** until they are signed and Unpause checks the signature before using one; until then Unpause uses
+only the lists built into the version you installed, and you get new lists by installing a new version.
 
 ## Going back to an earlier version
 
