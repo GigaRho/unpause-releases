@@ -3,9 +3,9 @@
 What changed in each version of Unpause, newest first, written for players. Each release on the [Releases](https://github.com/GigaRho/unpause-releases/releases)
 page carries the same notes, and Settings › Updates shows them under What's new before you install.
 
-## Coming in the next version
+## 0.2.0-alpha.1 — the first alpha under the name Unpause (2026‑09‑25)
 
-The next preview is the first under the name Unpause and the first published here. Highlights so far:
+The first alpha under the name Unpause and the first published here; every alpha after it arrives through Settings › Updates on its own. Highlights:
 
 - **Everything you play in one place.** Your Steam, Epic, GOG, Xbox and Battle.net games appear next to your console games,
   with no sign‑in, and Play hands them to their store. EA app, Ubisoft Connect, Amazon Games and itch are **experimental**:
@@ -24,7 +24,6 @@ The next preview is the first under the name Unpause and the first published her
   its memory measurement is not reliable, so it rates no console and offers no preset.
 - **Windows handhelds** get their own layout, battery warnings and play through sleep (a preview until it has been tested on
   each handheld); **Controller only** mode and more accessibility options.
-- Not in this preview: updates from inside Unpause are off until builds are signed; install a new version by hand.
 - **Help & feedback**: report a bug or share an idea from inside Unpause, with the diagnostics shown to you in full first.
 - When a game stops, Recovery says what actually happened and what to do next; on Windows set to English, Unpause also
   notices when a game stops responding (other languages of Windows later). On Linux and the Steam Deck a different check

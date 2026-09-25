@@ -39,20 +39,20 @@ expect rough edges and tell us about them. Known issue: on Linux and the Steam D
 **Ubuntu, Debian, Mint, Pop!\_OS** (**Preview**) — install the `.deb`:
 
 ```bash
-sudo apt install ./Unpause_<version>_amd64.deb
+sudo apt install ./Unpause-Preview_<version>_amd64.deb
 ```
 
 **Fedora, openSUSE** (**Preview**) — install the `.rpm`:
 
 ```bash
-sudo dnf install ./Unpause-<version>-1.x86_64.rpm
+sudo dnf install ./Unpause-Preview_<version>_x86_64.rpm
 ```
 
 **Any Linux, or the Steam Deck** (**Preview**) — the AppImage runs without installing:
 
 ```bash
-chmod +x Unpause_<version>_amd64.AppImage
-./Unpause_<version>_amd64.AppImage
+chmod +x Unpause-Preview_<version>_amd64.AppImage
+./Unpause-Preview_<version>_amd64.AppImage
 ```
 
 On a Steam Deck, switch to desktop mode, download the AppImage into your home folder, right‑click it › Properties ›
