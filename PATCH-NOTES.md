@@ -3,6 +3,38 @@
 What changed in each version of Unpause, newest first, written for players. Each release on the [Releases](https://github.com/GigaRho/unpause-releases/releases)
 page carries the same notes, and Settings › Updates shows them under What's new before you install.
 
+## 0.2.0-alpha.3 — fast on a big library, and a desktop that looks like one (2026‑09‑30)
+
+From one player's real library of 23,000 games: what was slow, what looked wrong and what could be lost. Highlights:
+
+- **A desktop that shows more**: smaller text and controls at a desk, seven columns of games where there were five,
+  Settings in about two screens, one status bar that stays put, nothing glowing under your mouse.
+- **No more waiting on your folders**: they are read at start once a day instead of every time; search reads a page,
+  not the library; details and pictures reach every game in the background, shown on the tray with a stop button.
+- **Your library outlives a reinstall**: daily copies in your Documents folder, and a start without a library asks
+  first: Restore, or Start fresh. Settings shows the copies and removes them when you ask twice.
+- **Steam covers are back**, from Steam's own files under their new name.
+- **A slow emulator is starting, not frozen**: "Starting…" until its window answers, and the wait is not counted as play.
+
+Known: the question at start is a Windows dialog a controller cannot answer yet; save backups and captures still go
+with "remove app data" (your library copies stay); ZX Spectrum games are not shown yet.
+
+## 0.2.0-alpha.2 — every way a game comes in (2026‑09‑28)
+
+About 130 landed changes in three days, most of them the library telling the truth. Highlights:
+
+- **Home tells the truth.** No more "ready to play" for every game: Home says how many consoles still need setup, never
+  offers a game that cannot start, and a Library card says why a game can't start yet.
+- **Art and details from what you already have**: pictures beside a game, the ones ES‑DE, RetroBat or Steam already
+  downloaded, a PC game's own icon; connect IGDB or change the details source and your existing games are asked again.
+- **What's new, since your build**, and a real nightly channel with notes written for you.
+- **Family**: Library › Show… by age rating and without the mature content a Steam developer declared.
+- **Stores, honestly**: a Steam game says when Steam is updating it or found its files damaged; an Xbox game says it may
+  be Game Pass; Epic's Options open the Epic launcher; PS3, 3DS and Vita packages install through their emulators.
+
+Known: a zipped and an unzipped copy of a ROM are still two cards, and PC installers can still show as games (next
+entry of the plan). If Unpause says your library was saved by a newer version, install this build.
+
 ## 0.2.0-alpha.1 — the first alpha under the name Unpause (2026‑09‑25)
 
 The first alpha under the name Unpause and the first published here; every alpha after it arrives through Settings › Updates on its own. Highlights:

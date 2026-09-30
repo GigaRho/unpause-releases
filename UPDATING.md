@@ -1,10 +1,10 @@
 # Keeping Unpause up to date
 
-**On the preview builds published so far, updates from inside Unpause are off**: these builds are not signed yet, so they
-cannot check an update is genuine and never download one. Install a new version by hand from the
-[Releases](https://github.com/GigaRho/unpause-releases/releases) page (see "Updates are not signed on this build yet"
-below); your library and settings are kept. Once builds are signed, everything below happens in **Settings › Updates**,
-and Unpause never installs anything behind your back.
+From 0.2.0‑alpha.1 on, Unpause updates itself: a new version downloads in the background, is checked against Unpause's
+own signature, and installs when you quit. The next time you start Unpause, **What's new** is the first thing you see.
+Earlier preview builds were not signed and never update themselves: install a new version by hand from the
+[Releases](https://github.com/GigaRho/unpause-releases/releases) page once (see "Updates are not signed on this build yet"
+below); your library and settings are kept.
 
 ## Channels: how new you like it
 
@@ -19,10 +19,18 @@ stable player never gets a beta.
 ## How an update happens (signed builds)
 
 1. Unpause checks your channel 30 seconds after it starts and every 6 hours after that, or when you press **Check now**.
-   A check asks one small file what the newest version is; nothing downloads.
-2. When there is something new, you see **What's new** first: the patch notes for that version.
-3. **Install and restart** downloads the update, checks its signature while it downloads (a file that does not match is
-   thrown away and you are told so), installs it and starts Unpause again. Your library and settings stay as they are.
+   An alpha or beta build always follows at least the beta channel, so it is offered the next alpha or beta.
+2. When there is something new, Unpause downloads it in the background and checks its signature while it downloads (a
+   file that does not match is thrown away and the Updates screen says so).
+3. When you quit Unpause, the installer runs by itself (a small progress window, no questions). Your library and settings
+   stay as they are.
+4. The next start opens **What's new** over the first screen: the notes for the version you now have. One press closes it,
+   and it does not come back.
+5. If the installer ran but Unpause starts on the old version, it says the update did not install and offers **Get the
+   installer**, the page with that version's installer.
+
+In Settings › Updates you can read What's new before the update installs, **Install and restart** at once, or choose
+**Not this version**.
 
 Unpause does not install:
 
