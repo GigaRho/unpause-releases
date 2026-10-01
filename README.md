@@ -1,7 +1,7 @@
 # Unpause
 
-**One launcher for every generation of games.** Unpause puts your console games, your Steam, Epic, GOG, Xbox and Battle.net
-games (EA app, Ubisoft Connect, Amazon Games and itch are experimental until tried on a real install), and the programs on
+**One launcher for every generation of games.** Unpause puts your console games, your Steam, Epic, GOG and Xbox
+games (Battle.net, EA app, Ubisoft Connect, Amazon Games, itch, Heroic, Lutris and Bottles are experimental until tried on a real install), and the programs on
 your PC in one library, and starts each of them with the right
 emulator or store in one press. It is fast with tens of thousands of titles, is being built so that a keyboard, a mouse, a
 controller and touch each work on their own, at a desk, on a couch or on a handheld (in the previews, a few settings still
@@ -36,15 +36,18 @@ Step‑by‑step instructions for each system are in **[INSTALL.md](https://gith
    at any it missed, or install one of the emulators it offers from the project's own official release.
 3. **Play.** Enter (or A) starts a game. When something does not start, the Recovery screen says why and what to try next;
    Settings › Doctor tells you which BIOS or firmware files a console needs and whether yours are good copies.
-4. **Lost?** Hold Back on a controller for 5 seconds, or Esc for 3, from anywhere: you are back on Home with the default
-   controls.
+4. **Lost?** Hold Back on a controller for 5 seconds, or Esc for 3, while Unpause is in front: you are back on Home with
+   the default controls. While a game runs, the hold resets Unpause's controls where they are, and does not reach Unpause at
+   all while the game has the focus.
 
 ## Keeping Unpause up to date
 
-The previews published so far are not signed, so updates from inside Unpause are off: install a new version by hand from
-the [newest release](https://github.com/GigaRho/unpause-releases/releases); your library and settings are kept. Once builds
-are signed, Settings › Updates checks for new versions, shows what's new first, and installs only when you say so, never
-while a game is running, on the **stable** or **beta** channel you choose. See
+From 0.2.0‑alpha.1 on, Unpause updates itself: it checks for a new version in the background, on the **stable** or **beta**
+channel you choose, downloads it, checks its signature and installs it when you quit, never while a game is running.
+**What's new** is the first thing you see after an update. Settings › Updates lets you read what's new first, install and
+restart at once, pause updates or skip a version; while updates are paused, nothing downloads or installs. Earlier previews cannot update
+themselves: install a newer version over them by hand from the
+[newest release](https://github.com/GigaRho/unpause-releases/releases) once; your library and settings are kept. See
 **[UPDATING.md](https://github.com/GigaRho/unpause-releases/blob/main/UPDATING.md)**.
 
 ## Help and news
@@ -58,5 +61,11 @@ while a game is running, on the **stable** or **beta** channel you choose. See
 ## About this page
 
 Everything here is published by Unpause's release process: the installers, their signatures, and the `channels` release,
-whose `stable.json` and `beta.json` are what Settings › Updates reads once builds are signed. Please do not rely on those
-files' contents; they change with every release.
+whose `stable.json` and `beta.json` are what Settings › Updates reads. Please do not rely on those files' contents; they
+change with every release.
+
+## Trademarks
+
+Unpause is not affiliated with or endorsed by Valve, Microsoft, Sony, Nintendo, Sega, Epic Games, GOG, Blizzard, ASUS,
+Lenovo or MSI. Steam and Steam Deck are trademarks of Valve Corporation; Xbox is a trademark of the Microsoft group of
+companies; other names are trademarks of their owners.

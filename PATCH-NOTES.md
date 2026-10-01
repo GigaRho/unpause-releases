@@ -3,6 +3,21 @@
 What changed in each version of Unpause, newest first, written for players. Each release on the [Releases](https://github.com/GigaRho/unpause-releases/releases)
 page carries the same notes, and Settings › Updates shows them under What's new before you install.
 
+## 0.2.0-alpha.4 — the things you told us about alpha.3 (2026‑10‑01)
+
+A day and a half after alpha.3, from one player's list after a day with it. Highlights:
+
+- **Install from the app**: Restart and install quits, installs and comes back; What's new is a short page in the app,
+  since the version you had.
+- **One card per game**: zipped and unzipped copies, regions, revisions and discs are one card; a PC game's folder is
+  one game; arcade games show their titles; search finds "ff6" and "ffvi".
+- **A desktop that gets out of your way**: three card sizes, a compact list, grouped Settings, the sidebar tree,
+  Ctrl+K and Ctrl+F, a wide game page, whole covers, and a scroll that moves only when you move it.
+- **Stop stops**: the library scan and the background passes end when you say so.
+
+Known: Back has no fixed place yet; the letter button does not follow the letter; the start question is a Windows
+dialog; ZX Spectrum games now play in RetroArch's Fuse core.
+
 ## 0.2.0-alpha.3 — fast on a big library, and a desktop that looks like one (2026‑09‑30)
 
 From one player's real library of 23,000 games: what was slow, what looked wrong and what could be lost. Highlights:

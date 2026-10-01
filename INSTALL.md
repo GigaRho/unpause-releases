@@ -17,7 +17,9 @@ which one), then follow the steps for your system below.
 
 1. Run `Unpause_<version>_x64-setup.exe`.
 2. Until Unpause's installers are code‑signed, Windows SmartScreen shows "Windows protected your PC". Choose **More info**,
-   then **Run anyway**. (Signed installers are on the way; this step then goes away.)
+   then **Run anyway**. (Signed installers are on the way; this step then goes away.) If Windows says **Smart App Control**
+   blocked it, there is no **Run anyway**: Smart App Control refuses programs that are not signed, so this preview cannot run
+   on that PC until signed installers ship.
 3. The installer puts Unpause in your Start menu. It installs for your user only and does not need administrator rights.
 
 The `.msi` (the same app for PCs managed by an IT department or installed with a deployment tool) is not offered for
@@ -67,9 +69,9 @@ folder stays as a backup.
 
 ## Where Unpause keeps your things
 
-Your library (with the copies Unpause keeps before each upgrade, `library.sqlite.v*.bak`), settings, artwork, save backups
-(`backups`), captures (`captures`), the emulators you installed from Get emulators (`emulators`, **with their own settings and
-saves**) and your original emulator settings files that a performance preset replaced (`presets`) live in one folder:
+Your library (with the copies Unpause keeps before each upgrade, `library.sqlite.v*.bak`), settings, artwork, the emulators
+you installed from Get emulators (`emulators`, **with their own settings and saves**) and your original emulator settings
+files that a performance preset replaced (`presets`) live in one folder:
 
 | System | Folder |
 |---|---|
@@ -85,8 +87,8 @@ when you restart, until an upcoming fix, so you enter them again after a restart
 
 Your game files and your stores are never moved or changed. Your emulators' folders are changed in two cases: restoring a
 save backup writes into the emulator's save folder, and a performance preset writes the emulator's own settings file for that
-game (Revert on the game's Options puts yours back). Before a launch, Unpause copies that game's saves into its `backups`
-folder when **Before each launch** is on in a game's Options › Saves & states (on by default) and it knows where that
+game (Revert on the game's Options puts yours back). Before a launch, Unpause copies that game's saves into your
+`Save backups` folder (in `Documents\Unpause`) when **Before each launch** is on in a game's Options › Saves & states (on by default) and it knows where that
 emulator keeps them. You can restore a backup from the same screen, but restoring can also change other games that share the
 same memory card or save folder; check before you restore.
 
@@ -95,16 +97,32 @@ delete them; copy its saves out before updating (fixed in an upcoming release).
 
 ## Uninstalling
 
-- **Windows**: Settings › Apps › Installed apps › Unpause › Uninstall. Your data folder stays unless you tick "Delete the
-  application data" in the uninstaller.
+- **Windows**: Settings › Apps › Installed apps › Unpause › Uninstall. Your data folder stays unless you tick "Remove my
+  library, play history and settings from this PC" in the uninstaller. When you tick it, Unpause first saves one last copy
+  of your library in `Documents\Unpause\Backups`, which the uninstaller never removes, and the last page says where it is.
+  The next time Unpause starts with no library it offers that copy (Restore or Start fresh) and changes nothing until you
+  answer. Delete that folder too if you want nothing left; Settings › Library copies lists the copies and removes them.
 - **Linux**: `sudo apt remove unpause`, `sudo dnf remove unpause`, or delete the AppImage.
 
-Deleting the data folder (or ticking the box) also deletes your save backups, the emulators you installed from Get emulators
-**together with their saves**, and the only copy of any emulator settings file a preset replaced; the presets stay applied in
-your emulators. Before you do it, revert your presets from each game's Options and copy out `backups` and `emulators` if you
-want to keep them. Your games and the emulators you installed yourself are not deleted either way.
+Deleting the data folder (or ticking the box) also deletes the emulators you installed from Get emulators **together with
+their saves**, and the only copy of any emulator settings file a preset replaced; the presets stay applied in your
+emulators. Before you do it, revert your presets from each game's Options and copy out `emulators` if you want to keep
+them. Your games and the emulators you installed yourself are not deleted either way.
+
+Your save backups (`Save backups`), your captures (`Captures`) and the copies of your library (`Backups`) are in
+`Documents\Unpause` (`~/Documents/Unpause` on macOS and Linux), which the uninstaller never removes; Settings › Your files
+opens that folder. If an earlier version left save backups or captures in the data folder, the next start moves them there
+in the background, with Unpause already open and one line on the tray saying how far it is: each file is copied and read
+back before its original is removed, it waits while a game is running, and if anything cannot be moved it stays where it is
+and the next start carries on.
 
 ## Something went wrong?
 
 See the [FAQ](https://github.com/GigaRho/unpause-releases/blob/main/FAQ.md), or report it in [unpause-feedback](https://github.com/GigaRho/unpause-feedback/issues/new/choose).
 If Unpause starts, Settings › Help & feedback fills in the report for you.
+
+## Trademarks
+
+Unpause is not affiliated with or endorsed by Valve, Microsoft, Sony, Nintendo, Sega, Epic Games, GOG, Blizzard, ASUS,
+Lenovo or MSI. Steam and Steam Deck are trademarks of Valve Corporation; Xbox is a trademark of the Microsoft group of
+companies; other names are trademarks of their owners.

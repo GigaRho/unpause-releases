@@ -4,8 +4,8 @@
 
 **What does Unpause do?**
 It gathers everything you play into one library: game files for consoles and computers (48 systems, Atari 2600 onward, plus
-arcade and DOS), your Steam, Epic, GOG, Xbox and Battle.net games (EA app, Ubisoft Connect, Amazon Games and itch are
-experimental until they have been tried on a real install), and the programs on your PC. Play starts each one the right
+arcade and DOS), your Steam, Epic, GOG and Xbox games (Battle.net, EA app, Ubisoft Connect, Amazon Games, itch, Heroic,
+Lutris and Bottles are experimental until they have been tried on a real install), and the programs on your PC. Play starts each one the right
 way: the matching emulator for a game file, the store's own client for a store game. It tracks play time, backs up saves
 before a launch, and tells you in plain words why something did not start.
 
@@ -45,9 +45,9 @@ enter them again after a restart.
 ## Playing
 
 **Can I use a controller?**
-Yes. You can use a controller, a keyboard or a mouse, and switch between them at any time. In this build pad navigation can
-still skip past several items on one press; a keyboard is the reliable choice until that fix ships. Hold **Back for 5
-seconds** (or **Esc for 3**) anywhere to return to Home with the default controls.
+Yes. You can use a controller, a keyboard or a mouse, and switch between them at any time. Hold **Back for 5 seconds** (or
+**Esc for 3**) while Unpause is in front to return to Home with the default controls. While a game runs, the hold resets
+Unpause's controls where they are, and while the game has the focus it does not reach Unpause at all.
 
 **Does it work on my handheld?**
 Support for the Steam Deck and for the ROG Ally, Legion Go and MSI Claw is being built for the beta. Until each has been
@@ -62,7 +62,7 @@ help, **Report this** on the Recovery screen fills in a bug report for you.
 **Are my saves safe?**
 Unpause does not change your saves while you play. Before a launch, when **Before each launch** is on in a game's Options ›
 Saves & states (on by default), it copies that game's saves (and, for GameCube, Wii, PlayStation, PlayStation 2 and PSP
-games, its save states) into its own backups folder, keeping the last 10 by default. The same **Saves & states** screen
+games, its save states) into its own `Save backups` folder in `Documents\Unpause`, keeping the last 10 by default. The same **Saves & states** screen
 restores any of them, after backing up what is there first. A restore writes into the emulator's save folder and can also
 change other games that share the same memory card or save folder, so check before you restore.
 
@@ -72,17 +72,28 @@ are copied into the game's Gallery when you stop playing. Your originals stay wh
 
 ## Updates and versions
 
-**How do I update?** On the previews published so far, by hand: install the newest release over the one you have (your
-library and settings are kept); updates from inside Unpause are off until builds are signed. Then it is Settings › Updates.
-See [UPDATING.md](https://github.com/GigaRho/unpause-releases/blob/main/UPDATING.md).
+**How do I update?** You do not have to. From 0.2.0‑alpha.1 on, Unpause downloads a new version in the background, checks
+its signature and installs it when you quit, never while a game is running; the next start opens **What's new**. Settings ›
+Updates lets you install at once, pause updates or skip a version. Earlier previews cannot update
+themselves: install the newest release over the one you have once (your library and settings are kept). See
+[UPDATING.md](https://github.com/GigaRho/unpause-releases/blob/main/UPDATING.md).
 
 **What changed in this version?** [PATCH-NOTES.md](https://github.com/GigaRho/unpause-releases/blob/main/PATCH-NOTES.md), or What's new in Settings › Updates.
 
 **Why does Windows warn me when I install?**
-Early builds are not code‑signed yet. [INSTALL.md](https://github.com/GigaRho/unpause-releases/blob/main/INSTALL.md) shows the one extra click; signed installers are on the way.
+The installers are not code‑signed yet. SmartScreen's "Windows protected your PC" has a way through
+([INSTALL.md](https://github.com/GigaRho/unpause-releases/blob/main/INSTALL.md) shows it). If Windows says **Smart App
+Control** blocked it, there is no way through: Smart App Control refuses unsigned programs, so this preview cannot run on
+that PC until signed installers ship.
 
 ## Help
 
 **I found a bug, or I have an idea.**
 Settings › Help & feedback, or [unpause-feedback](https://github.com/GigaRho/unpause-feedback): bugs and crashes as issues,
 ideas, thoughts and questions in Discussions. Every report gets a first answer within a week.
+
+## Trademarks
+
+Unpause is not affiliated with or endorsed by Valve, Microsoft, Sony, Nintendo, Sega, Epic Games, GOG, Blizzard, ASUS,
+Lenovo or MSI. Steam and Steam Deck are trademarks of Valve Corporation; Xbox is a trademark of the Microsoft group of
+companies; other names are trademarks of their owners.
