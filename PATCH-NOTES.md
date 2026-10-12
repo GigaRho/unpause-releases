@@ -3,6 +3,22 @@
 What changed in each version of Unpause, newest first, written for players. Each release on the [Releases](https://github.com/GigaRho/unpause-releases/releases)
 page carries the same notes, and Settings › Updates shows them under What's new before you install.
 
+## 0.2.0-alpha.5 — a new look, your saves kept safe, and a launcher for the couch (2026‑10‑11)
+
+Ten days after alpha.4: Unpause looks different everywhere, keeps your saves, and fills a TV. Highlights:
+
+- **A new look**: a calm frame around your collection with the art first; Dark, Light or Match my system; a first-run
+  question about how you like to play; Settings opens on an Overview with a card per section.
+- **Your saves, kept**: backups before and after every game, from emulators and stores alike, named, compared and
+  restored with the current save backed up first; a save follows an N64, PlayStation or Genesis game to another
+  emulator.
+- **Play from the couch**: on a TV or a handheld Unpause fills the screen, the Library names the game you are on and a
+  game's page shows its picture across the screen; F11 switches fullscreen anywhere.
+
+Also: a text field you reach with a pad opens a keyboard along the bottom of the screen, and an install updated from
+an earlier alpha looks nothing up online until you say yes. Known: Windows handhelds and Linux are previews; macOS is
+unavailable in this build.
+
 ## 0.2.0-alpha.4 — the things you told us about alpha.3 (2026‑10‑01)
 
 A day and a half after alpha.3, from one player's list after a day with it. Highlights:
@@ -54,8 +70,8 @@ entry of the plan). If Unpause says your library was saved by a newer version, i
 
 The first alpha under the name Unpause and the first published here; every alpha after it arrives through Settings › Updates on its own. Highlights:
 
-- **Everything you play in one place.** Your Steam, Epic, GOG, Xbox and Battle.net games appear next to your console games,
-  with no sign‑in, and Play hands them to their store. EA app, Ubisoft Connect, Amazon Games and itch are **experimental**:
+- **Everything you play in one place.** Your Steam, Epic, GOG and Xbox games appear next to your console games,
+  with no sign‑in, and Play hands them to their store. Battle.net, EA app, Ubisoft Connect, Amazon Games and itch are **experimental**:
   they have not yet been tried on a real install, so some games may be missing. The programs on your PC can join too.
 - **Home tells you what to play tonight**: Continue, a Tonight pick, your Backlog and what's new since last time. Mark each
   game Backlog, Playing, Beaten, Completed or Shelved.
@@ -73,7 +89,7 @@ The first alpha under the name Unpause and the first published here; every alpha
   each handheld); **Controller only** mode and more accessibility options.
 - **Help & feedback**: report a bug or share an idea from inside Unpause, with the diagnostics shown to you in full first.
 - When a game stops, Recovery says what actually happened and what to do next; on Windows set to English, Unpause also
-  notices when a game stops responding (other languages of Windows later). On Linux and the Steam Deck a different check
+  notices when a game stops responding (other languages of Windows later). On Linux and the Steam Deck™ a different check
   runs today and can wrongly say "Not responding" (for example with Flatpak emulators); a later update fixes it.
 - If you used the RetrUX preview, your library moves over by itself on the first start.
 
@@ -86,4 +102,5 @@ The first installable build, shared with testers before the rename; it was not p
 - Supervised launches: crashes are reported in plain language, with diagnostics you can copy.
 - Choose the emulator per game; play time and last played on cards; Continue playing and Recently added on Home.
 - Text size up to 2×, reduced motion, layouts for desktop, TV and handheld.
-- Everything stays on your computer: no accounts, no telemetry.
+- Your library stays on your computer: no accounts, no telemetry. Artwork and game details are looked up online by title unless
+  you turn them off in Settings › Artwork & details.

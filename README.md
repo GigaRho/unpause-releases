@@ -16,12 +16,12 @@ Open the [newest release](https://github.com/GigaRho/unpause-releases/releases) 
 
 | Your computer | The file to download | Notes |
 |---|---|---|
-| Windows 10 or 11 (64‑bit) | `Unpause_<version>_x64-setup.exe` | The usual choice. The `.msi` for IT‑managed PCs comes with the stable release, not with previews and betas. |
+| Windows 10 or 11 (Intel or AMD, 64‑bit) | `Unpause_<version>_x64-setup.exe` | The usual choice. Windows on Arm has not been tested. The `.msi` for IT‑managed PCs comes with the stable release, not with previews and betas. |
 | Windows handheld (ROG Ally, Legion Go, MSI Claw) | `Unpause_<version>_x64-setup.exe` | **Preview** until it has been tested on each handheld. |
 | Mac (Apple silicon or Intel) | none yet | A Mac version comes once it has been tested on a Mac. |
 | Ubuntu, Debian, Mint, Pop!\_OS | `Unpause-Preview_<version>_amd64.deb` | **Preview.** |
 | Fedora, openSUSE | `Unpause-Preview_<version>_x86_64.rpm` | **Preview.** |
-| Steam Deck, or any other Linux | `Unpause-Preview_<version>_amd64.AppImage` | Runs without installing. **Preview** until it has been tested on a real Deck and on Linux. |
+| Steam Deck™, or any other Linux on an Intel or AMD processor | `Unpause-Preview_<version>_amd64.AppImage` | Runs without installing. **Preview** until it has been tested on a real Deck and on Linux. |
 
 Versions starting with `0.`, and any `-alpha` or `-beta`, are previews: they work, but expect rough edges and tell us about
 them.
@@ -30,9 +30,9 @@ Step‑by‑step instructions for each system are in **[INSTALL.md](https://gith
 
 ## Your first five minutes
 
-1. **Add a folder.** Home walks you through it: pick the folders where your game files live. Unpause recognizes 48
+1. **Add a folder.** Home walks you through it: pick the folders where your game files live. Unpause recognizes
    consoles and computers from the Atari 2600 onward, plus arcade, DOS and PC games. Your store games appear on their own.
-2. **Check your emulators.** Settings › Emulators shows which of 61 emulator setups Unpause found on your computer. Point it
+2. **Check your emulators.** Settings › Emulators shows which of the emulator setups Unpause knows it found on your computer. Point it
    at any it missed, or install one of the emulators it offers from the project's own official release.
 3. **Play.** Enter (or A) starts a game. When something does not start, the Recovery screen says why and what to try next;
    Settings › Doctor tells you which BIOS or firmware files a console needs and whether yours are good copies.

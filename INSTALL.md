@@ -7,9 +7,9 @@ which one), then follow the steps for your system below.
 
 | | Minimum |
 |---|---|
-| Windows | Windows 10 or 11, 64‑bit. Unpause uses Microsoft Edge WebView2, which Windows 11 already has; on Windows 10 the installer fetches it if it is missing, so stay online for the first install. |
+| Windows | Windows 10 or 11 on an Intel or AMD 64‑bit processor (Windows on Arm, such as Snapdragon PCs, has not been tested). Unpause uses Microsoft Edge WebView2, which Windows 11 already has; on Windows 10 the installer fetches it if it is missing, so stay online for the first install. |
 | macOS | Not available yet: a Mac version comes once it has been tested on a Mac. |
-| Linux (**Preview**) | A 64‑bit desktop from 2022 or later (Ubuntu 22.04, Debian 12, Fedora 36 or newer), or a Steam Deck in desktop mode. |
+| Linux (**Preview**) | An Intel or AMD 64‑bit desktop from 2022 or later (Ubuntu 22.04, Debian 12, Fedora 36 or newer), or a Steam Deck™ in desktop mode. Linux on Arm (a Raspberry Pi, an Arm handheld) is not supported yet. |
 | Space | About 100 MB for Unpause itself; artwork, save backups and captures grow with your library. |
 | Games and emulators | Your own. Unpause launches the emulators and stores you already have, and can install a few open‑source emulators from their official releases. |
 
@@ -63,7 +63,10 @@ Permissions › **Is executable**, and double‑click it. To see it in Gaming Mo
 ## The first start
 
 Home asks for the folders where your game files are, looks for your emulators, and reads what your stores installed on this
-computer (nothing is downloaded and no sign‑in is needed). That's it: pick a game and press Play. If you used Unpause under
+computer (no sign‑in is needed). About 30 seconds after it starts, Unpause checks online for a new version of itself and
+of the emulators it can install; Pause updates in Settings › Updates and privacy stops that. Pictures and game details are
+looked up online only once you say yes. [PRIVACY.md](https://github.com/GigaRho/unpause-releases/blob/main/PRIVACY.md)
+lists every address it reaches. That's it: pick a game and press Play. If you used Unpause under
 its old name, RetrUX, your library, artwork, backups and saved cards move over by themselves on the first start, and the old
 folder stays as a backup.
 
@@ -82,8 +85,8 @@ The log Unpause writes (Settings › Help & feedback shows its last lines, scrub
 on Windows and `~/.local/share/app.unpause.desktop/logs` on Linux.
 
 Passwords and keys you give Unpause for artwork services are not in that folder: they are in your system's credential store
-(Windows Credential Manager; on Linux and the Steam Deck, the kernel keyring). On Linux and the Steam Deck they are forgotten
-when you restart, until an upcoming fix, so you enter them again after a restart.
+(Windows Credential Manager; on Linux and the Steam Deck, your desktop's keyring, such as GNOME Keyring or KWallet), kept across
+restarts. Where no keyring is running, Unpause says it could not save them rather than forgetting them later.
 
 Your game files and your stores are never moved or changed. Your emulators' folders are changed in two cases: restoring a
 save backup writes into the emulator's save folder, and a performance preset writes the emulator's own settings file for that
