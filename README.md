@@ -55,6 +55,7 @@ themselves: install a newer version over them by hand from the
 - **[FAQ.md](https://github.com/GigaRho/unpause-releases/blob/main/FAQ.md)**: what Unpause does and does not do, privacy, controllers, saves.
 - **[PATCH-NOTES.md](https://github.com/GigaRho/unpause-releases/blob/main/PATCH-NOTES.md)**: what changed in every version, written for players. Each release on the
   [Releases](https://github.com/GigaRho/unpause-releases/releases) page carries its own notes too.
+- **[THIRD-PARTY-NOTICES.md](https://github.com/GigaRho/unpause-releases/blob/main/THIRD-PARTY-NOTICES.md)**: the third-party code and data Unpause carries, with their licenses.
 - **Found a problem or have an idea?** Settings › Help & feedback in Unpause fills in the report for you. You can also go
   straight to [unpause-feedback](https://github.com/GigaRho/unpause-feedback).
 
