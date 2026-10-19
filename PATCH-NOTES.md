@@ -71,7 +71,7 @@ entry of the plan). If Unpause says your library was saved by a newer version, i
 The first alpha under the name Unpause and the first published here; every alpha after it arrives through Settings › Updates on its own. Highlights:
 
 - **Everything you play in one place.** Your Steam, Epic, GOG and Xbox games appear next to your console games,
-  with no sign‑in, and Play hands them to their store. Battle.net, EA app, Ubisoft Connect, Amazon Games and itch are **experimental**:
+  with no sign‑in, and Play hands them to their store. Battle.net, EA app, Ubisoft Connect, Amazon Games, itch, Heroic, Lutris and Bottles are **experimental**:
   they have not yet been tried on a real install, so some games may be missing. The programs on your PC can join too.
 - **Home tells you what to play tonight**: Continue, a Tonight pick, your Backlog and what's new since last time. Mark each
   game Backlog, Playing, Beaten, Completed or Shelved.
