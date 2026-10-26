@@ -56,7 +56,10 @@ not in it. [PRIVACY.md](https://github.com/GigaRho/unpause-releases/blob/main/PR
 | `raw.githubusercontent.com` | Year, developer, publisher and genre from libretro-database | After a scan, once you said yes to looking things up online | Details source: off (Settings › Pictures and details) |
 | `query.wikidata.org`, `en.wikipedia.org` | A Steam game's other platforms and review scores from Wikidata, and its Wikipedia summary | When you open a Steam game's page, at most once a month per game, once you said yes to looking things up online | Details source: off (Settings › Pictures and details) |
 | `id.twitch.tv`, `api.igdb.com`, `images.igdb.com` | Details, a synopsis and covers from IGDB | After a scan, and when you search for a match, only with your Twitch application connected | Details source: off, or disconnect IGDB |
+| `cdn.cloudflare.steamstatic.com` | A Steam game's own library art and cover from Steam's image servers, by its app id | After a scan, once per game, once you said yes to looking things up online | Pictures source: off (Settings › Pictures and details) |
+| `api.steampowered.com` | The Steam games your account owns, with your own Steam Web API key, to show the ones this PC has not installed | At each scan, only with your key added | Remove the key (Settings › Pictures and details) |
 | `www.steamgriddb.com`, `cdn2.steamgriddb.com` | Box art for store games, PC games and apps | After a scan, only with your SteamGridDB key added | Remove the key (Settings › Pictures and details) |
+| `api.itch.io` | The games your itch.io account owns, to show the ones this PC has not installed (itch.io support is experimental) | Only after you sign in to itch.io | Nothing is fetched unless you sign in to itch.io |
 | `api.github.com` | The ideas people asked for on Unpause's feedback board | When you open Help & feedback | Nothing is fetched unless you open it |
 <!-- online:end -->
 

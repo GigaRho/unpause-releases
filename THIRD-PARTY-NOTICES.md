@@ -30,7 +30,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 `unpause-desktop` and `unpause-cli`; JavaScript and fonts: the production dependencies of
 `apps/desktop`). Not edited by hand.
 
-597 packages.
+615 packages.
 
 | Package | License | Home |
 |---|---|---|
@@ -54,6 +54,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | android_system_properties (Rust) | MIT OR Apache-2.0 | https://github.com/nical/android_system_properties |
 | anyhow (Rust) | MIT OR Apache-2.0 | https://github.com/dtolnay/anyhow |
 | array-init (Rust) | MIT OR Apache-2.0 | https://github.com/Manishearth/array-init/ |
+| arrayref (Rust) | BSD-2-Clause | https://github.com/droundy/arrayref |
 | arrayvec (Rust) | MIT OR Apache-2.0 | https://github.com/bluss/arrayvec |
 | async-broadcast (Rust) | MIT OR Apache-2.0 | https://github.com/smol-rs/async-broadcast |
 | async-channel (Rust) | Apache-2.0 OR MIT | https://github.com/smol-rs/async-channel |
@@ -125,6 +126,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | darling (Rust) | MIT | https://github.com/TedDriggs/darling |
 | darling_core (Rust) | MIT | https://github.com/TedDriggs/darling |
 | darling_macro (Rust) | MIT | https://github.com/TedDriggs/darling |
+| data-url (Rust) | MIT OR Apache-2.0 | https://github.com/servo/rust-url |
 | dataview (Rust) | MIT | https://github.com/CasualX/dataview |
 | dbus (Rust) | Apache-2.0/MIT | https://github.com/diwic/dbus-rs |
 | dbus-secret-service (Rust) | MIT OR Apache-2.0 | https://github.com/brotskydotcom/dbus-secret-service.git |
@@ -163,6 +165,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | equivalent (Rust) | Apache-2.0 OR MIT | https://github.com/indexmap-rs/equivalent |
 | erased-serde (Rust) | MIT OR Apache-2.0 | https://github.com/dtolnay/erased-serde |
 | errno (Rust) | MIT OR Apache-2.0 | https://github.com/lambda-fairy/rust-errno |
+| euclid (Rust) | MIT OR Apache-2.0 | https://github.com/servo/euclid |
 | event-listener (Rust) | Apache-2.0 OR MIT | https://github.com/smol-rs/event-listener |
 | event-listener-strategy (Rust) | Apache-2.0 OR MIT | https://github.com/smol-rs/event-listener-strategy |
 | fallible-iterator (Rust) | MIT/Apache-2.0 | https://github.com/sfackler/rust-fallible-iterator |
@@ -174,6 +177,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | field-offset (Rust) | MIT OR Apache-2.0 | https://github.com/Diggsey/rust-field-offset |
 | filetime (Rust) | MIT/Apache-2.0 | https://github.com/alexcrichton/filetime |
 | flate2 (Rust) | MIT OR Apache-2.0 | https://github.com/rust-lang/flate2-rs |
+| float-cmp (Rust) | MIT | https://github.com/mikedilger/float-cmp |
 | fnv (Rust) | Apache-2.0 / MIT | https://github.com/servo/rust-fnv |
 | foldhash (Rust) | Zlib | https://github.com/orlp/foldhash |
 | foreign-types (Rust) | MIT/Apache-2.0 | https://github.com/sfackler/foreign-types |
@@ -245,6 +249,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | idna_adapter (Rust) | Apache-2.0 OR MIT | https://github.com/hsivonen/idna_adapter |
 | image (Rust) | MIT OR Apache-2.0 | https://github.com/image-rs/image |
 | image-webp (Rust) | MIT OR Apache-2.0 | https://github.com/image-rs/image-webp |
+| imagesize (Rust) | MIT | https://github.com/Roughsketch/imagesize |
 | indexmap (Rust) | Apache-2.0 OR MIT | https://github.com/indexmap-rs/indexmap |
 | indexmap (Rust) | Apache-2.0 OR MIT | https://github.com/bluss/indexmap |
 | infer (Rust) | MIT | https://github.com/bojand/infer |
@@ -276,6 +281,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | keyring (Rust) | MIT OR Apache-2.0 | https://github.com/hwchen/keyring-rs.git |
 | kqueue (Rust) | MIT | https://gitlab.com/rust-kqueue/rust-kqueue |
 | kqueue-sys (Rust) | MIT | https://gitlab.com/rust-kqueue/rust-kqueue-sys |
+| kurbo (Rust) | Apache-2.0 OR MIT | https://github.com/linebender/kurbo |
 | lazy_static (Rust) | MIT OR Apache-2.0 | https://github.com/rust-lang-nursery/lazy-static.rs |
 | lazycell (Rust) | MIT/Apache-2.0 | https://github.com/indiv0/lazycell |
 | libappindicator (Rust) | Apache-2.0 OR MIT |  |
@@ -372,11 +378,13 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | phf_generator (Rust) | MIT | https://github.com/rust-phf/rust-phf |
 | phf_macros (Rust) | MIT | https://github.com/rust-phf/rust-phf |
 | phf_shared (Rust) | MIT | https://github.com/rust-phf/rust-phf |
+| pico-args (Rust) | MIT | https://github.com/RazrFalcon/pico-args |
 | pin-project-lite (Rust) | Apache-2.0 OR MIT | https://github.com/taiki-e/pin-project-lite |
 | piper (Rust) | MIT OR Apache-2.0 | https://github.com/smol-rs/piper |
 | plist (Rust) | MIT | https://github.com/ebarnard/rust-plist/ |
 | png (Rust) | MIT OR Apache-2.0 | https://github.com/image-rs/image-png |
 | polling (Rust) | Apache-2.0 OR MIT | https://github.com/smol-rs/polling |
+| polycool (Rust) | MIT OR Apache-2.0 | https://github.com/linebender/kurbo |
 | portable-atomic (Rust) | Apache-2.0 OR MIT | https://github.com/taiki-e/portable-atomic |
 | portable-atomic-util (Rust) | Apache-2.0 OR MIT | https://github.com/taiki-e/portable-atomic-util |
 | potential_utf (Rust) | Unicode-3.0 | https://github.com/unicode-org/icu4x |
@@ -406,8 +414,11 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | regex-automata (Rust) | MIT OR Apache-2.0 | https://github.com/rust-lang/regex |
 | regex-syntax (Rust) | MIT OR Apache-2.0 | https://github.com/rust-lang/regex |
 | reqwest (Rust) | MIT OR Apache-2.0 | https://github.com/seanmonstar/reqwest |
+| resvg (Rust) | Apache-2.0 OR MIT | https://github.com/linebender/resvg |
 | rfd (Rust) | MIT | https://github.com/PolyMeilex/rfd |
+| rgb (Rust) | MIT | https://github.com/kornelski/rust-rgb |
 | ring (Rust) | Apache-2.0 AND ISC | https://github.com/briansmith/ring |
+| roxmltree (Rust) | MIT OR Apache-2.0 | https://github.com/RazrFalcon/roxmltree |
 | rsqlite-vfs (Rust) | MIT |  |
 | rusqlite (Rust) | MIT | https://github.com/rusqlite/rusqlite |
 | rustc-hash (Rust) | Apache-2.0 OR MIT | https://github.com/rust-lang/rustc-hash |
@@ -448,10 +459,12 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | sha1 (Rust) | MIT OR Apache-2.0 | https://github.com/RustCrypto/hashes |
 | sha1_smol (Rust) | BSD-3-Clause | https://github.com/mitsuhiko/sha1-smol |
 | sha2 (Rust) | MIT OR Apache-2.0 | https://github.com/RustCrypto/hashes |
+| signal-hook (Rust) | Apache-2.0/MIT | https://github.com/vorner/signal-hook |
 | signal-hook-registry (Rust) | MIT OR Apache-2.0 | https://github.com/vorner/signal-hook |
 | simd_cesu8 (Rust) | Apache-2.0 OR MIT | https://github.com/seancroach/simd_cesu8 |
 | simd-adler32 (Rust) | MIT | https://github.com/mcountryman/simd-adler32 |
 | simdutf8 (Rust) | MIT OR Apache-2.0 | https://github.com/rusticstuff/simdutf8 |
+| simplecss (Rust) | Apache-2.0 OR MIT | https://github.com/linebender/simplecss |
 | siphasher (Rust) | MIT/Apache-2.0 | https://github.com/jedisct1/rust-siphash |
 | slab (Rust) | MIT | https://github.com/tokio-rs/slab |
 | smallvec (Rust) | MIT OR Apache-2.0 | https://github.com/servo/rust-smallvec |
@@ -463,10 +476,12 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | stable_deref_trait (Rust) | MIT OR Apache-2.0 | https://github.com/storyyeller/stable_deref_trait |
 | starship-battery (Rust) | ISC | https://github.com/starship/rust-battery |
 | static_assertions (Rust) | MIT OR Apache-2.0 | https://github.com/nvzqz/static-assertions-rs |
+| strict-num (Rust) | MIT | https://github.com/RazrFalcon/strict-num |
 | string_cache (Rust) | MIT OR Apache-2.0 | https://github.com/servo/string-cache |
 | strsim (Rust) | MIT | https://github.com/rapidfuzz/strsim-rs |
 | substring (Rust) | MIT OR Apache-2.0 | https://github.com/Anders429/substring |
 | subtle (Rust) | BSD-3-Clause | https://github.com/dalek-cryptography/subtle |
+| svgtypes (Rust) | Apache-2.0 OR MIT | https://github.com/linebender/svgtypes |
 | swift-rs (Rust) | MIT OR Apache-2.0 | https://github.com/Brendonovich/swift-rs |
 | syn (Rust) | MIT OR Apache-2.0 | https://github.com/dtolnay/syn |
 | sync_wrapper (Rust) | Apache-2.0 | https://github.com/Actyx/sync_wrapper |
@@ -499,6 +514,8 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | time (Rust) | MIT OR Apache-2.0 | https://github.com/time-rs/time |
 | time-core (Rust) | MIT OR Apache-2.0 | https://github.com/time-rs/time |
 | time-macros (Rust) | MIT OR Apache-2.0 | https://github.com/time-rs/time |
+| tiny-skia (Rust) | BSD-3-Clause | https://github.com/linebender/tiny-skia |
+| tiny-skia-path (Rust) | BSD-3-Clause | https://github.com/linebender/tiny-skia/tree/master/path |
 | tinystr (Rust) | Unicode-3.0 | https://github.com/unicode-org/icu4x |
 | tinyvec (Rust) | Zlib OR Apache-2.0 OR MIT | https://github.com/Lokathor/tinyvec |
 | tokio (Rust) | MIT | https://github.com/tokio-rs/tokio |
@@ -534,6 +551,7 @@ packages the desktop app and the command line tool are built from (Rust: normal 
 | ureq-proto (Rust) | MIT OR Apache-2.0 | https://github.com/algesten/ureq-proto |
 | url (Rust) | MIT OR Apache-2.0 | https://github.com/servo/rust-url |
 | urlpattern (Rust) | MIT | https://github.com/denoland/rust-urlpattern |
+| usvg (Rust) | Apache-2.0 OR MIT | https://github.com/linebender/resvg |
 | utf8_iter (Rust) | Apache-2.0 OR MIT | https://github.com/hsivonen/utf8_iter |
 | utf8-zero (Rust) | MIT OR Apache-2.0 | https://github.com/algesten/utf8-zero |
 | uuid (Rust) | Apache-2.0 OR MIT | https://github.com/uuid-rs/uuid |
@@ -870,7 +888,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### @tauri-apps/api, fdeflate, fearless_simd, field-offset, image, image-webp and 23 more
+### @tauri-apps/api, fdeflate, fearless_simd, field-offset, image, image-webp and 25 more
 
 ```text
 Apache License
@@ -2640,7 +2658,38 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ```
 
-### arrayvec, async-channel, async-executor, async-io, async-lock, async-process and 118 more
+### arrayref
+
+```text
+Copyright (c) 2015 David Roundy <roundyd@physics.oregonstate.edu>
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+1. Redistributions of source code must retain the above copyright
+   notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the
+   distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+### arrayvec, async-channel, async-executor, async-io, async-lock, async-process and 124 more
 
 ```text
 Apache License
@@ -3518,7 +3567,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ```
 
-### bitreader, claxon, embed_plist, encoding_rs, lzma-rust2, multiversion and 17 more
+### bitreader, claxon, embed_plist, encoding_rs, kurbo, lzma-rust2 and 19 more
 
 ```text
 Apache License
@@ -4704,7 +4753,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ```
 
-### core-foundation, core-foundation-sys, core-graphics, core-graphics-types, string_cache
+### core-foundation, core-foundation-sys, core-graphics, core-graphics-types, euclid, string_cache
 
 ```text
 Copyright (c) 2012-2013 Mozilla Foundation
@@ -6354,6 +6403,36 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+### data-url, idna, percent-encoding, url
+
+```text
+Copyright (c) 2013-2025 The rust-url developers
+
+Permission is hereby granted, free of charge, to any
+person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the
+Software without restriction, including without
+limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software
+is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice
+shall be included in all copies or substantial portions
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
 ```
 
 ### dataview, derive_pod
@@ -8281,7 +8360,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ```
 
-### fearless_simd
+### fearless_simd, kurbo, polycool
 
 ```text
 Copyright (c) 2018 Raph Levien
@@ -8377,6 +8456,30 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+```
+
+### float-cmp
+
+```text
+Copyright (c) 2014-2020 Optimal Computing (NZ) Ltd
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies
+of the Software, and to permit persons to whom the Software is furnished to do
+so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+IN THE SOFTWARE.
 ```
 
 ### fnv
@@ -9017,7 +9120,7 @@ DEALINGS IN THE SOFTWARE.
 ### getrandom
 
 ```text
-Copyright (c) 2018-2024 The rust-random Project Developers
+Copyright (c) 2018-2025 The rust-random Project Developers
 Copyright (c) 2014 The Rust Project Developers
 
 Permission is hereby granted, free of charge, to any
@@ -9048,7 +9151,7 @@ DEALINGS IN THE SOFTWARE.
 ### getrandom
 
 ```text
-Copyright (c) 2018-2025 The rust-random Project Developers
+Copyright (c) 2018-2024 The rust-random Project Developers
 Copyright (c) 2014 The Rust Project Developers
 
 Permission is hereby granted, free of charge, to any
@@ -10081,36 +10184,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### idna, percent-encoding, url
-
-```text
-Copyright (c) 2013-2025 The rust-url developers
-
-Permission is hereby granted, free of charge, to any
-person obtaining a copy of this software and associated
-documentation files (the "Software"), to deal in the
-Software without restriction, including without
-limitation the rights to use, copy, modify, merge,
-publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software
-is furnished to do so, subject to the following
-conditions:
-
-The above copyright notice and this permission notice
-shall be included in all copies or substantial portions
-of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
-ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
-TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
-PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
-SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
-IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
-```
-
 ### idna_adapter
 
 ```text
@@ -10139,6 +10212,32 @@ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
+```
+
+### imagesize
+
+```text
+MIT License
+
+Copyright (c) 2017 Maiddog
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
 ### indexmap
@@ -13595,6 +13694,30 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ```
 
+### pico-args
+
+```text
+Copyright (c) 2019 Yevhenii Reizner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
 ### plist
 
 ```text
@@ -15180,12 +15303,68 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
+### resvg, usvg
+
+```text
+Copyright 2017 the Resvg Authors
+
+Permission is hereby granted, free of charge, to any
+person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the
+Software without restriction, including without
+limitation the rights to use, copy, modify, merge,
+publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software
+is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice
+shall be included in all copies or substantial portions
+of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
+TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT
+SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
+```
+
 ### rfd
 
 ```text
 MIT License
 
 Copyright (c) 2022 Bartłomiej Maryńczak
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### rgb
+
+```text
+MIT License
+
+Copyright (c) 2019 Kornel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -15512,6 +15691,32 @@ SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
 WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
 OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
 CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+```
+
+### roxmltree
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2018 Yevhenii Reizner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ```
 
 ### rustls-native-certs
@@ -16056,7 +16261,7 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 ```
 
-### signal-hook-registry
+### signal-hook, signal-hook-registry
 
 ```text
 Copyright (c) 2017 tokio-jsonrpc developers
@@ -16092,6 +16297,32 @@ DEALINGS IN THE SOFTWARE.
 MIT License
 
 Copyright (c) [2021] [Marvin Countryman]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+### simplecss
+
+```text
+The MIT License (MIT)
+
+Copyright (c) 2018 Reizner Evgeniy
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -16516,6 +16747,30 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
+### strict-num
+
+```text
+Copyright (c) 2022 Yevhenii Reizner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+```
+
 ### strsim
 
 ```text
@@ -16602,6 +16857,30 @@ PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
 NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+```
+
+### svgtypes
+
+```text
+Copyright (c) 2018 Yevhenii Reizner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 ```
 
 ### swift-rs
@@ -17169,6 +17448,41 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+```
+
+### tiny-skia, tiny-skia-path
+
+```text
+Copyright (c) 2011 Google Inc. All rights reserved.
+Copyright (c) 2020 Yevhenii Reizner All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are
+met:
+
+  * Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+  * Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the
+    distribution.
+
+  * Neither the name of the copyright holder nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
 ### tokio, tokio-util

@@ -9,7 +9,7 @@ which one), then follow the steps for your system below.
 |---|---|
 | Windows | Windows 10 or 11 on an Intel or AMD 64‑bit processor (Windows on Arm, such as Snapdragon PCs, has not been tested). Unpause uses Microsoft Edge WebView2, which Windows 11 already has; on Windows 10 the installer fetches it if it is missing, so stay online for the first install. |
 | macOS | Not available yet: a Mac version comes once it has been tested on a Mac. |
-| Linux (**Preview**) | An Intel or AMD 64‑bit desktop from 2022 or later (Ubuntu 22.04, Debian 12, Fedora 36 or newer), or a Steam Deck™ in desktop mode. Linux on Arm (a Raspberry Pi, an Arm handheld) is not supported yet. |
+| Linux (**Preview**) | An Intel or AMD 64‑bit desktop kept up to date (Ubuntu 22.04, Debian 12, Fedora 36 or newer), or a Steam Deck™ in desktop mode. Linux on Arm (a Raspberry Pi, an Arm handheld) is not supported yet. |
 | Space | About 100 MB for Unpause itself; artwork, save backups and captures grow with your library. |
 | Games and emulators | Your own. Unpause launches the emulators and stores you already have, and can install a few open‑source emulators from their official releases. |
 
@@ -38,6 +38,12 @@ Every Linux package, and the Steam Deck, is a **Preview** until it has been test
 expect rough edges and tell us about them. Known issue: on Linux and the Steam Deck, Unpause can wrongly say a game is
 "Not responding" (for example with Flatpak emulators); a later update fixes it.
 
+Use the `.deb` or the `.rpm` when your system has one: they install like any other program. The AppImage is one file
+for every other system.
+
+The `.deb` and `.rpm` require WebKitGTK 2.40 or newer. If your package manager cannot meet that requirement,
+update your system and try again. The package manager checks the engine version before installing Unpause.
+
 **Ubuntu, Debian, Mint, Pop!\_OS** (**Preview**) — install the `.deb`:
 
 ```bash
@@ -50,12 +56,15 @@ sudo apt install ./Unpause-Preview_<version>_amd64.deb
 sudo dnf install ./Unpause-Preview_<version>_x86_64.rpm
 ```
 
-**Any Linux, or the Steam Deck** (**Preview**) — the AppImage runs without installing:
+**Any other Linux, or the Steam Deck** (**Preview**) — the AppImage is one file that runs without installing:
 
 ```bash
 chmod +x Unpause-Preview_<version>_amd64.AppImage
 ./Unpause-Preview_<version>_amd64.AppImage
 ```
+
+The AppImage needs `/dev/fuse` and `fusermount3`. Desktops have both, but some containers do not; there, install the
+`.deb` or the `.rpm` instead.
 
 On a Steam Deck, switch to desktop mode, download the AppImage into your home folder, right‑click it › Properties ›
 Permissions › **Is executable**, and double‑click it. To see it in Gaming Mode, add it to Steam with **Add a Non‑Steam Game**.
@@ -105,12 +114,25 @@ delete them; copy its saves out before updating (fixed in an upcoming release).
   of your library in `Documents\Unpause\Backups`, which the uninstaller never removes, and the last page says where it is.
   The next time Unpause starts with no library it offers that copy (Restore or Start fresh) and changes nothing until you
   answer. Delete that folder too if you want nothing left; Settings › Library copies lists the copies and removes them.
-- **Linux**: `sudo apt remove unpause`, `sudo dnf remove unpause`, or delete the AppImage.
+- **Linux**: `sudo apt remove unpause`, `sudo dnf remove unpause`, or delete the AppImage. None of these touches your
+  home folder: your library, play history, settings and the emulators you installed from Get emulators stay in
+  `~/.local/share/app.unpause.desktop`, and your store sign-ins stay in your desktop's keyring (Passwords and Keys, or
+  KWallet) under `app.unpause.desktop` (and `app.retrux.desktop` from before the rename). Delete that folder and those
+  entries if you want nothing left. The Flatpak keeps its folder in `~/.var/app/app.unpause.desktop`:
+  `flatpak uninstall --delete-data app.unpause.desktop` removes it with the app.
 
-Deleting the data folder (or ticking the box) also deletes the emulators you installed from Get emulators **together with
-their saves**, and the only copy of any emulator settings file a preset replaced; the presets stay applied in your
-emulators. Before you do it, revert your presets from each game's Options and copy out `emulators` if you want to keep
-them. Your games and the emulators you installed yourself are not deleted either way.
+On Windows, ticking the box also moves the emulators you installed from Get emulators, **with their own settings and
+saves**, to `Documents\Unpause\Emulators` (`Emulators (2)` if an earlier uninstall kept some there) before the data folder
+goes; if they cannot be moved, or the last copy of your library cannot be saved, the uninstaller asks before it
+removes anything. Deleting the data folder yourself deletes them with it (removing Unpause on Linux keeps the folder):
+copy out `emulators` first if you want to keep them. Your games and the
+emulators you installed yourself are not deleted either way.
+
+On Windows, every uninstall first puts back the emulator settings files your performance presets changed, whether you
+tick the box or not: your own file returns and the ones Unpause made go. A file you changed yourself since stays as it
+is. If one stays with Unpause's settings, your own file is beside it as `<name>.unpause-backup` (for example
+`Snes9x.cfg.unpause-backup`): rename it back to put it in place. On Linux, revert your presets from each game's Options
+before you remove Unpause.
 
 Your save backups (`Save backups`), your captures (`Captures`) and the copies of your library (`Backups`) are in
 `Documents\Unpause` (`~/Documents/Unpause` on macOS and Linux), which the uninstaller never removes; Settings › Your files
@@ -122,7 +144,18 @@ and the next start carries on.
 ## Something went wrong?
 
 See the [FAQ](https://github.com/GigaRho/unpause-releases/blob/main/FAQ.md), or report it in [unpause-feedback](https://github.com/GigaRho/unpause-feedback/issues/new/choose).
-If Unpause starts, Settings › Help & feedback fills in the report for you.
+If Unpause starts, Settings › Help & feedback fills in the report for you. If it cannot start, its message saves a
+report in the `exports` folder of your data folder and says where: open it and paste it into the crash report. Starting
+Unpause from a terminal with `--diagnostics report.json` writes the same report without opening a window.
+
+**A blank or white window on Linux**, most often with NVIDIA's own driver: start Unpause with WebKitGTK's
+DMA‑BUF renderer off. From a terminal:
+
+```sh
+WEBKIT_DISABLE_DMABUF_RENDERER=1 unpause-desktop
+```
+
+For the AppImage, put the same variable before `./Unpause-Preview_<version>_amd64.AppImage`.
 
 ## Trademarks
 

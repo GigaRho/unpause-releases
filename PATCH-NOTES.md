@@ -61,7 +61,7 @@ About 130 landed changes in three days, most of them the library telling the tru
 - **What's new, since your build**, and a real nightly channel with notes written for you.
 - **Family**: Library › Show… by age rating and without the mature content a Steam developer declared.
 - **Stores, honestly**: a Steam game says when Steam is updating it or found its files damaged; an Xbox game says it may
-  be Game Pass; Epic's Options open the Epic launcher; PS3, 3DS and Vita packages install through their emulators.
+  be Game Pass; Epic's Options open the Epic launcher; Vita packages install through Vita3K.
 
 Known: a zipped and an unzipped copy of a ROM are still two cards, and PC installers can still show as games (next
 entry of the plan). If Unpause says your library was saved by a newer version, install this build.
