@@ -17,17 +17,22 @@ the build fails when the code reaches an address that is not in it.
 | `github.com`, `buildbot.libretro.com` | An emulator you chose to install | When you press Install | Nothing is fetched unless you press it |
 | `buildbot.libretro.com` | The RetroArch core a game needs, when RetroArch does not have it | When you press Play on that game | Pause updates |
 | `objects.githubusercontent.com`, `release-assets.githubusercontent.com` | Where GitHub serves the downloads above from | With the downloads above | As above |
-| `thumbnails.libretro.com` | Covers and screenshots, looked up by each game's title | After a scan, once you said yes to looking things up online | Pictures source: off (Settings › Pictures and details) |
+| `thumbnails.libretro.com` | Covers and screenshots, looked up by each game's title | After a scan, on by default | Pictures source: off (Settings › Pictures and details) |
 | `api.screenscraper.fr`, `*.screenscraper.fr` | Covers and screenshots from ScreenScraper | After a scan, only with your ScreenScraper credentials connected | Pictures source: off, or disconnect ScreenScraper |
-| `raw.githubusercontent.com` | Year, developer, publisher and genre from libretro-database | After a scan, once you said yes to looking things up online | Details source: off (Settings › Pictures and details) |
-| `query.wikidata.org`, `en.wikipedia.org` | A Steam game's other platforms and review scores from Wikidata, and its Wikipedia summary | When you open a Steam game's page, at most once a month per game, once you said yes to looking things up online | Details source: off (Settings › Pictures and details) |
+| `raw.githubusercontent.com` | Year, developer, publisher and genre from libretro-database | After a scan, on by default | Details source: off (Settings › Pictures and details) |
+| `query.wikidata.org`, `en.wikipedia.org`, `fr.wikipedia.org`, `de.wikipedia.org`, `es.wikipedia.org`, `it.wikipedia.org`, `pt.wikipedia.org`, `ja.wikipedia.org`, `nl.wikipedia.org` | A Steam game's other platforms and review scores from Wikidata, and its Wikipedia summary | When you open a Steam game's page, at most once a month per game, on by default | Details source: off (Settings › Pictures and details) |
 | `id.twitch.tv`, `api.igdb.com`, `images.igdb.com` | Details, a synopsis and covers from IGDB | After a scan, and when you search for a match, only with your Twitch application connected | Details source: off, or disconnect IGDB |
-| `cdn.cloudflare.steamstatic.com` | A Steam game's own library art and cover from Steam's image servers, by its app id | After a scan, once per game, once you said yes to looking things up online | Pictures source: off (Settings › Pictures and details) |
+| `cdn.cloudflare.steamstatic.com` | A Steam game's own library art and cover from Steam's image servers, by its app id | After a scan, once per game, on by default | Pictures source: off (Settings › Pictures and details) |
 | `api.steampowered.com` | The Steam games your account owns, with your own Steam Web API key, to show the ones this PC has not installed | At each scan, only with your key added | Remove the key (Settings › Pictures and details) |
 | `www.steamgriddb.com`, `cdn2.steamgriddb.com` | Box art for store games, PC games and apps | After a scan, only with your SteamGridDB key added | Remove the key (Settings › Pictures and details) |
 | `api.itch.io` | The games your itch.io account owns, to show the ones this PC has not installed (itch.io support is experimental) | Only after you sign in to itch.io | Nothing is fetched unless you sign in to itch.io |
+| `itch.io`, `img.itch.zone` | The top web games on itch for Find web games, from itch's public feed, with a picture of each | At most once a day, on by default | Pictures source: off (Settings › Pictures and details) |
 | `api.github.com` | The ideas people asked for on Unpause's feedback board | When you open Help & feedback | Nothing is fetched unless you open it |
 <!-- online:end -->
+
+Looking up pictures and details is on from the start and uses free services that need no account. What they get is each
+game's title. Turn it off in Settings › Pictures and details, and nothing more is asked. Services that need an account
+(IGDB, ScreenScraper, SteamGridDB) are used only if you connect one.
 
 Links Unpause shows you (an emulator's home page, a driver download, a sign-up page) open in your browser; Unpause itself
 fetches nothing from them.

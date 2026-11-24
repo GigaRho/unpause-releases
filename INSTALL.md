@@ -27,6 +27,8 @@ preview and beta builds; it comes with the stable release.
 
 **Windows handhelds** (ROG Ally, Legion Go, MSI Claw), a **Preview** until it has been tested on each handheld: install the
 same way in desktop mode. Unpause picks the handheld layout by itself; Settings › Accessibility › Input map has a Handheld map that puts Options and "hide Unpause" on the back paddles.
+If Unpause says your controller is acting as a mouse and keyboard, switch it to gamepad mode: on a ROG Ally, Armoury
+Crate SE › Control mode › Gamepad mode; on an MSI Claw, MSI Center M › Quick Settings › Control mode › Gamepad mode.
 
 ## macOS
 
@@ -50,10 +52,16 @@ update your system and try again. The package manager checks the engine version 
 sudo apt install ./Unpause-Preview_<version>_amd64.deb
 ```
 
-**Fedora, openSUSE** (**Preview**) — install the `.rpm`:
+**Fedora, openSUSE** (**Preview**) — install the `.rpm`. On Fedora:
 
 ```bash
 sudo dnf install ./Unpause-Preview_<version>_x86_64.rpm
+```
+
+On openSUSE (the `.rpm` is not GPG-signed, so zypper needs `--allow-unsigned-rpm` to install it):
+
+```bash
+sudo zypper install --allow-unsigned-rpm ./Unpause-Preview_<version>_x86_64.rpm
 ```
 
 **Any other Linux, or the Steam Deck** (**Preview**) — the AppImage is one file that runs without installing:
@@ -110,18 +118,30 @@ delete them; copy its saves out before updating (fixed in an upcoming release).
 ## Uninstalling
 
 - **Windows**: Settings › Apps › Installed apps › Unpause › Uninstall. Your data folder stays unless you tick "Remove my
-  library, play history and settings from this PC" in the uninstaller. When you tick it, Unpause first saves one last copy
-  of your library in `Documents\Unpause\Backups`, which the uninstaller never removes, and the last page says where it is.
+  library, play history and settings from this PC" in the uninstaller. When you tick it and keep a copy, Unpause first saves one last copy
+  of your library in `Documents\Unpause\Backups` (or the folder you chose in Settings › Library copies), which the
+  uninstaller keeps, and the last page says where it is.
   The next time Unpause starts with no library it offers that copy (Restore or Start fresh) and changes nothing until you
-  answer. Delete that folder too if you want nothing left; Settings › Library copies lists the copies and removes them.
+  answer. Settings › Library copies lists the copies and removes them. Your save backups, your captures and your store
+  sign-ins (in Windows Credential Manager, under `app.unpause.desktop`, and `app.retrux.desktop` from before the rename) stay too; remove them yourself if you want
+  nothing left.
+  After you tick the box, the uninstaller asks: Yes keeps a copy of your library, as above; No is "Remove everything
+  Unpause keeps": your library and its copies, play history, settings, `Documents\Unpause`, the save backups and captures
+  Unpause made, and your store sign-ins all go. Your games, the folders you chose, and the emulators you installed from
+  Get emulators, with their saves, stay; the last page says where. Cancel keeps it all and removes only the program.
+  Files that were removed may still be recoverable with a disk tool, and copies in OneDrive or another cloud folder are
+  not touched.
 - **Linux**: `sudo apt remove unpause`, `sudo dnf remove unpause`, or delete the AppImage. None of these touches your
   home folder: your library, play history, settings and the emulators you installed from Get emulators stay in
   `~/.local/share/app.unpause.desktop`, and your store sign-ins stay in your desktop's keyring (Passwords and Keys, or
   KWallet) under `app.unpause.desktop` (and `app.retrux.desktop` from before the rename). Delete that folder and those
-  entries if you want nothing left. The Flatpak keeps its folder in `~/.var/app/app.unpause.desktop`:
+  entries if you want nothing left, or run `unpause-desktop --erase-user-data` as yourself (not with `sudo`) before you
+  remove the package, or the AppImage with `--erase-user-data`: it removes what Unpause keeps, sign-ins included, and
+  leaves the emulators you installed from Get emulators, with their saves. If you removed the package first, its
+  removal says where the folder is: reinstall and run the command, or delete the folder. The Flatpak keeps its folder in `~/.var/app/app.unpause.desktop`:
   `flatpak uninstall --delete-data app.unpause.desktop` removes it with the app.
 
-On Windows, ticking the box also moves the emulators you installed from Get emulators, **with their own settings and
+On Windows, keeping a copy also moves the emulators you installed from Get emulators, **with their own settings and
 saves**, to `Documents\Unpause\Emulators` (`Emulators (2)` if an earlier uninstall kept some there) before the data folder
 goes; if they cannot be moved, or the last copy of your library cannot be saved, the uninstaller asks before it
 removes anything. Deleting the data folder yourself deletes them with it (removing Unpause on Linux keeps the folder):
@@ -135,7 +155,7 @@ is. If one stays with Unpause's settings, your own file is beside it as `<name>.
 before you remove Unpause.
 
 Your save backups (`Save backups`), your captures (`Captures`) and the copies of your library (`Backups`) are in
-`Documents\Unpause` (`~/Documents/Unpause` on macOS and Linux), which the uninstaller never removes; Settings › Your files
+`Documents\Unpause` (`~/Documents/Unpause` on macOS and Linux), which the uninstaller keeps unless you choose "Remove everything Unpause keeps"; Settings › Your files
 opens that folder. If an earlier version left save backups or captures in the data folder, the next start moves them there
 in the background, with Unpause already open and one line on the tray saying how far it is: each file is copied and read
 back before its original is removed, it waits while a game is running, and if anything cannot be moved it stays where it is
@@ -149,7 +169,7 @@ report in the `exports` folder of your data folder and says where: open it and p
 Unpause from a terminal with `--diagnostics report.json` writes the same report without opening a window.
 
 **A blank or white window on Linux**, most often with NVIDIA's own driver: start Unpause with WebKitGTK's
-DMA‑BUF renderer off. From a terminal:
+DMA‑BUF renderer off. With NVIDIA's own driver, Unpause does this itself when it starts. On other graphics, from a terminal:
 
 ```sh
 WEBKIT_DISABLE_DMABUF_RENDERER=1 unpause-desktop

@@ -12,6 +12,7 @@ below); your library and settings are kept.
 |---|---|---|
 | **stable** (default) | Finished versions only (`1.2.0`). | Everyone. |
 | **beta** | Previews of the next version (`1.3.0-beta.1`) a week or more before it is final, plus every stable version. | Players who like new things early and tell us what broke. |
+| **nightly** | A build from the newest work (`1.3.0-alpha.1.nightly.202610281200`) each night it changes, plus every alpha, beta and stable version. The least tested. | Players who want to try what was made today. |
 
 Switch channels in the first row of Settings › Updates. You are only ever offered a version newer than the one you have; a
 stable player never gets a beta.
